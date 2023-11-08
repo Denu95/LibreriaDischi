@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibreriaDischi
 {
-    public class DVD : SupportoMusicale
+    public class Dvd : SupportoMusicale
     {
     }
 }
