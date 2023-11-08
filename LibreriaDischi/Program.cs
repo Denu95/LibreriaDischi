@@ -1,25 +1,37 @@
-﻿using LibreriaDischi;
-
-public class Program
+﻿namespace LibreriaDischi
 {
-    private static void Main(string[] args)
+    public class Program
     {
-        SupportoMusicale disco = new()
+        private static void Main(string[] args)
         {
-            Nome = "Boh",
-            Descrizione = "è bello",
-            Prezzo = 9.99m
-        };
+            SupportoMusicale disco = new()
+            {
+                Nome = "Boh",
+                Descrizione = "è bello",
+                Prezzo = 9.99m
+            };
 
-        Brani brano = new()
-        {
-            Codice = 001,
-            Titolo = "uè",
-            Genere = "rock",
-            Durata = 3.24m
-        };
-        disco.ListaBrani.Add(brano);
-        Console.WriteLine(disco);
-        Console.WriteLine(brano);
+            Brani brano = new()
+            {
+                Codice = 001,
+                Titolo = "uè",
+                Genere = "rock",
+                Durata = 3.24m
+            };
+
+            Artisti artista = new()
+            {
+                Nome = "Boh",
+                Biografia = "è giovane, bello",
+                Nazionalita = "e anche abbronzato"
+
+            };
+            disco.ListaBrani.Add(brano);
+            brano.ListaArtisti.Add(artista);
+
+            Console.WriteLine(disco);
+            Console.WriteLine(brano);
+            Console.WriteLine(artista);
+        }
     }
 }
